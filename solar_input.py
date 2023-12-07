@@ -56,7 +56,6 @@ def parse_star_parameters(line, star):
     star.Vy = float(s[6])
     return star
 
-
 def parse_planet_parameters(line, planet):
     """Считывает данные о планете из строки.
     Предполагается такая строка:
@@ -94,9 +93,12 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     **space_objects** — список объектов планет и звёзд
     """
     with open(output_filename, 'w') as out_file:
+        ar = []
         for obj in space_objects:
-            #out_file.writelines(["%s %d %s %f" % ('1', 2, '3', 4.5)])
-            print(out_file, "%s %d %s %f" % ('1', 2, '3', 4.5))
+            # Доделать все переменные вывод
+            pass
+            #ar.append("%s %d %s %f" % (str(obj.type), int(obj.R), str(), 4.5))
+        out_file.writelines(ar)
 
 if __name__ == "__main__":
     print("This module is not for direct call!")
